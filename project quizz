@@ -1,0 +1,46 @@
+# code
+file_name="quiz.txt"
+score=0
+high_score=0
+
+def load_high_score():
+    global high_score
+    try:
+        file=open(file_name,"r")
+        high_score=int(file.read())
+        file.close()
+    except:
+        pass
+def save_high_score():
+    file=open(file_name,"w")
+    file.write(str(high_score))
+    file.close()
+def play_quiz():
+    global score
+    questions = ["What is 2+2","Greatest player of all time in cricket",
+             "What is 5 + 7?","Rate of gold today"]
+    
+    answers = ["4","Sachin Tendulkar","12","145150.012"]
+    for i in range(len(answers)):
+        print("\nQues.",questions[i])
+        user_answer=input("Your answer:")
+        if user_answer==answers[i]:
+            score=score+1
+            print("Correct")
+        else:
+            print("Wrong Answer")
+def main():
+    global high_score
+    load_high_score()
+    name=input("Enter your name: ")
+    play_quiz()
+    print("\nQuiz score")
+    print(name,"your score is:",score)
+    if score>high_score:
+        high_score=score
+        save_high_score()
+    else:
+        print("High score is :",high_score)
+main()
+
+    
