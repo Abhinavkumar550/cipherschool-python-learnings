@@ -1,0 +1,23 @@
+marks=[10,20,30,40]
+marks.append(50)
+marks.insert(1,60)
+marks.remove(60)
+marks.pop()
+print(marks)
+age=[23,34,12,43,33,23]
+age.sort()
+print(age)
+age.reverse()
+print(len(age))
+print(max(age))
+print(sum(age))
+print(sum(age)/len(age))
+print(age)
+state=["Uttar Pradesh","Haryana","Bihar","Himachal Pradesh"]
+state.sort()
+state.reverse()
+state.append("Jammu")
+state.insert(1,"Jharkhand")
+state.remove("Jammu")
+state.pop()
+print(state)
